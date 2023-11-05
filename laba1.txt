@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+
+float speed();
+float time();
+float distance();
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int count;
+	cout << "Введите что выхотите получить (Cкорость - 1; Время - 2; Расстояние - 3;) : ";
+	cin >> count;
+	switch (count)
+	{
+	case 1:
+		speed();
+		break;
+	case 2:
+		time();
+		break;
+	case 3:
+		distance();
+		break;
+	default:
+		cout << "Некорректное число!";
+		break;
+	}
+}
+
+
+float speed()
+{
+	float rasstoyanie, vremya, skorost;
+	cout << "Введите ваше расстояние (в км): ";
+	cin >> rasstoyanie;
+	cout << "Введите ваше время (в часах ): ";
+	cin >> vremya;
+	skorost = rasstoyanie / vremya;
+	cout << "Ваша скорость : " << skorost << " км/ч ";
+	return skorost;
+}
+
+float time()
+{
+	int rasstoyanie, vremya, skorost;
+	cout << "Введите вашу скорость (в км/ч): ";
+	cin >> skorost;
+	cout << "Введите ваше расстояние (в км): ";
+	cin >> rasstoyanie;
+	vremya = rasstoyanie / skorost;
+	cout << "Ваша время : " << vremya << " ч ";
+	return vremya;
+}
+
+float distance()
+{
+	int rasstoyanie, vremya, skorost;
+	cout << "Введите вашу скорость (в км/ч): ";
+	cin >> skorost;
+	cout << "Введите ваше время (в ч): ";
+	cin >> vremya;
+	rasstoyanie = skorost * vremya;
+	cout << "Вашe расстояние : " << rasstoyanie << " ч ";
+	return rasstoyanie;
+
+}
