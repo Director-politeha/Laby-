@@ -1,11 +1,9 @@
-#include "mainwindow.h"
+#include "medicine.h"
 #include <QApplication>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    Okno w;
-    w.show();
-
+    MedicineWindow medicinewindow;
+    medicinewindow.show();
     return a.exec();
 }
